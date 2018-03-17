@@ -1,1 +1,1 @@
-# javascript-promise-book
+[JavaScript Promiseの本](http://azu.github.io/promises-book/)をやってます。
