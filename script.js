@@ -19,9 +19,9 @@ function getURL(URL) {
   })
 }
 
-const URL = 'http://httpbin.org/get'
-getURL(URL).then(function onFulfilled(value) {
+const url = 'http://httpbin.org/status/500'
+getURL(url).then(function onFulfilled(value) {
   console.log(value)
 }).catch(function onRejected(error) {
-  console.log(error)
+  console.error(error)
 })
