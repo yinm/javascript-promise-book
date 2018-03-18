@@ -39,4 +39,9 @@ promiseオブジェクトの状態は、一度PendingからFulfilledやRejected�
 * `Promiseは常に非同期`で処理されるということが仕様で定められている
 * そのため、同期と非同期が混在しないように、`setTimeout`のような明示的に非同期処理にするためのコードが不要になる 
 
+## `Promise#then` の機能
+* コールバックとなる関数を登録する
+* 受け取った値を変化させて別のpromiseオブジェクトを生成する
 
+## `Promise#catch` の機能
+* `promise.then(undefined, onRejected);` のエイリアスとなるメソッド
