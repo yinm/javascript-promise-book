@@ -1,4 +1,4 @@
 const promise = Promise.reject(new Error('message'))
-promise['catch']((error) => {
+promise.then(undefined, (error) => {
   console.error(error)
 })
