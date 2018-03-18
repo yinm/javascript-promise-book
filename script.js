@@ -1,20 +1,18 @@
-function taskA() {
-  console.log('Task A')
-  return Promise.reject('throw Error @ Task A')
+function doubleUp(value) {
+  return value * 2
 }
-function taskB() {
-  console.log('Task B')
+function increment(value) {
+  return value + 1
 }
-function onRejected(error) {
-  console.error(error)
-}
-function finalTask() {
-  console.log('Final Task')
+function output(value) {
+  console.log(value)
 }
 
-const promise = Promise.resolve()
+const promise = Promise.resolve(1)
 promise
-  .then(taskA)
-  .then(taskB)
-  .catch(onRejected)
-  .then(finalTask)
+  .then(increment)
+  .then(doubleUp)
+  .then(output)
+  .catch((error) => {
+    console.error(error)
+  })
