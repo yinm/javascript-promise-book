@@ -1,12 +1,23 @@
 const aPromise = new Promise((resolve) => {
   resolve(100)
 })
-const thenPromsie = aPromise.then((value) => {
-  console.log(value)
+aPromise.then((value) => {
+  return value * 2
 })
-const catchPromise = thenPromsie.catch((error) => {
-  console.error(error)
+aPromise.then((value) => {
+  return value * 2
+})
+aPromise.then((value) => {
+  console.log('1: ' + value)
 })
 
-console.log(aPromise !== thenPromsie)
-console.log(thenPromsie !== catchPromise)
+const bPromise = new Promise((resolve) => {
+  resolve(100)
+})
+bPromise.then((value) => {
+  return value * 2
+}).then((value) => {
+  return value * 2
+}).then((value) => {
+  console.log('2: ' + value)
+})
