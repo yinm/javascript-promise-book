@@ -1,7 +1,3 @@
-promise = new Promise((resolve, reject) => {
-  reject(new Error('エラー'))
-})
-
-promise.catch((error) => {
+Promise.reject(new Error('BOOM!')).catch((error) => {
   console.error(error)
 })
