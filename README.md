@@ -41,7 +41,7 @@ promiseオブジェクトの状態は、一度PendingからFulfilledやRejected�
 
 ## `Promise#then` の機能
 * コールバックとなる関数を登録する
-* 受け取った値を変化させて別のpromiseオブジェクトを生成する
+* 受け取った値を変化させて別のpromiseオブジェクトを生成する (常に新しいpromiseオブジェクトを返す)
 
 ## `Promise#catch` の機能
 * `promise.then(undefined, onRejected);` のエイリアスとなるメソッド
