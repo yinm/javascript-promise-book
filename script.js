@@ -1,6 +1,3 @@
-promise = new Promise((resolve) => {
-  resolve(42);
-})
-promise.then((value) => {
+Promise.resolve(42).then((value) => {
   console.log(value)
 })
