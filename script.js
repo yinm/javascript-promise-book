@@ -1,6 +1,6 @@
 function taskA() {
   console.log('Task A')
-  throw new Error('throw Error @ Task A')
+  return Promise.reject('throw Error @ Task A')
 }
 function taskB() {
   console.log('Task B')
