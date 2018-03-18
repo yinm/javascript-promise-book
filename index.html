@@ -3,23 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Promiseのお勉強だよ！</title>
-  <!--<script src="script.js"></script>-->
+  <script src="script.js"></script>
 </head>
 <body>
-<script>
-  function onReady(fn) {
-    const readyState = document.readyState
-    if (readyState === 'interactive' || readyState === 'complete') {
-      setTimeout(fn, 0)
-    } else {
-      window.addEventListener('DOMContentLoaded', fn)
-    }
-  }
-
-  onReady(() => {
-    console.log('DOM fully loaded and parsed')
-  })
-  console.log('==Starting==')
-</script>
 </body>
 </html>
