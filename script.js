@@ -1,3 +1,7 @@
-Promise.resolve(42).then((value) => {
-  console.log(value)
+promise = new Promise((resolve, reject) => {
+  reject(new Error('エラー'))
+})
+
+promise.catch((error) => {
+  console.error(error)
 })

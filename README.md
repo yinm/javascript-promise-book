@@ -24,6 +24,13 @@
 * Rejected
   * reject(失敗)した時
   
-promiseオブジェクトの状態は、一度PendingからFulfilledやRejectedになると、それ以降変化しない
-このことをSettled(不変の)と表現する
-この特性のため、`.then`で登録した関数が呼ばれるのは1回限りであることが明確である 
+promiseオブジェクトの状態は、一度PendingからFulfilledやRejectedになると、それ以降変化しない。このことをSettled(不変の)と表現する。この特性のため、`.then`で登録した関数が呼ばれるのは1回限りであることが明確である 
+
+## Promiseオブジェクトの生成
+* `new Promise()`
+* `Promise.resolve()`: `new Promise()`のショートカットメソッド。渡した値でFulfilledされるpromiseオブジェクトを返すメソッド
+* `Promise.reject()`: `new Promise()`のショートカットメソッド
+
+## thenableなオブジェクト
+* promiseっぽいオブジェクトのこと
+* 具体的には、`.then`を持っているオブジェクトのことを指す
