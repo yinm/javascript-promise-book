@@ -8,6 +8,6 @@ function asyncFunction() {
 
 asyncFunction().then(function(value) {
   console.log(value)
-}).catch(function(error) {
+}, function(error) {
   console.log(error)
 })
