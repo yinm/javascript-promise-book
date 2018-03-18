@@ -1,10 +1,13 @@
-const promise = new Promise((resolve) => {
-  console.log('inner promise')
-  resolve(42)
-})
+function onReady(fn) {
+  const readyState = document.readyState
+  if (readyState === 'interactive' || readyState === 'complete') {
+    fn()
+  } else {
+    window.addEventListener('DOMContentLoaded', fn)
+  }
+}
 
-promise.then((value) => {
-  console.log(value)
+onReady(() => {
+  console.log('DOM fully loaded and parsed')
 })
-
-console.log('outer promise')
+console.log('==Starting==')
